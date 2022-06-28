@@ -1,16 +1,16 @@
-@use '../vars';
+@import '../vars';
 
 .shoppingCart {
   width: 400px;
   padding: 24px;
   box-sizing: border-box;
   position: absolute;
-  background: var(--white);
+  background: $--white;
   top: 60px;
   right: -360px;
   bottom: auto;
   border-radius: 8px 0 0 8px;
-  border: 1px solid var(--light-pink);
+  border: 1px solid $--light-pink;
   transition: 1s ease;
   animation: swipeLeft 1s ease forwards;
 }
@@ -27,7 +27,7 @@
   cursor: pointer;
 }
 .titleContainer p {
-  font-size: var(--lg);
+  font-size: $--lg;
   font-weight: bold;
   text-align: center;
 }
@@ -43,7 +43,7 @@
   grid-template-columns: auto 1fr;
   gap: 16px;
   align-items: center;
-  background-color: var(--text-input-field);
+  background-color: $--text-input-field;
   margin-bottom: 24px;
   border-radius: 8px;
   padding: 0 24px;
@@ -53,7 +53,7 @@
   flex-direction: column;
 }
 .order p span:nth-child(1) {
-  font-size: var(--md);
+  font-size: $--md;
   font-weight: bold;
 }
 .order p:nth-child(2) {
@@ -61,18 +61,18 @@
   font-weight: bold;
 }
 .primaryButton {
-  background-color: var(--flag--green);
+  background-color: $--flag--green;
   border-radius: 8px;
   border: none;
-  color: var(--white);
+  color: $--white;
   width: 100%;
   height:  48px;
-  font-size: var(--md);
+  font-size: $--md;
   font-weight: bold;
   cursor: pointer;
 }
 .primaryButton:hover {
-  background-color: var(--flag--green-hover);
+  background-color: $--flag--green-hover;
 }
 @media (max-width: 850px) {
   .shoppingCart {
@@ -83,10 +83,10 @@
   width: 10px;
   }
 .myOrderContent::-webkit-scrollbar-thumb {
-  background: var(--flag--green);
+  background: $--flag--green;
   border-radius: 4px;
   }
   
 .myOrderContent::-webkit-scrollbar-thumb:hover {
-  background: var(--flag--green-hover);
+  background: $--flag--green-hover;
   }

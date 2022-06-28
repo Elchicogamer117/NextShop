@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import AppContext from 'context/AppContext'
 import ShoppingCartItem from 'components/ShoppingCartItem'
 import arrow from 'assets/icons/arrow.svg'
-import 'styles/containers/ShoppingCart.scss'
+import styles from 'styles/containers/ShoppingCart.module.scss'
 
 const ShoppingCart = ({ toggleShopCart, setToggleShopCart }) => {
   const { state } = useContext(AppContext)
@@ -12,7 +12,7 @@ const ShoppingCart = ({ toggleShopCart, setToggleShopCart }) => {
   }
 
   return (
-  <aside className="shoppingCart">
+  <aside className={styles.ShoppingCart}>
     <div className="titleContainer">
       <img src={arrow} alt="arrow" onClick={() => setToggleShopCart(!toggleShopCart)}/>
       <p> Shooping cart </p>

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import AppContext from 'context/AppContext'
 import close from 'assets/icons/btClose.svg'
-import 'styles/components/ShoppingCartItem.scss'
+import styles from 'styles/components/ShoppingCartItem.module.scss'
 
 const ShoppingCartItem = ({ product, indexValue }) => {
   const { removeFromCart } = useContext(AppContext)
@@ -11,7 +11,7 @@ const ShoppingCartItem = ({ product, indexValue }) => {
   }
 
   return (
-    <div className="shoopingCardItem">        
+    <div className={styles.ShoppingCartItem}>        
       <figure>
         <img src={product.images[0]} alt={product.category.name} />                
       </figure>

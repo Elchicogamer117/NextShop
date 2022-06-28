@@ -1,14 +1,14 @@
-@use '../vars';
+@import '../vars';
 
-nav {
+.Nav {
   display: flex;
   justify-content: space-between;
   position: sticky;
   top: 0;
   padding: 0 24px;
   place-items: center;
-  border-bottom: 1px solid var(--light-pink);
-  background: var(--white);
+  border-bottom: 1px solid $--light-pink;
+  background: $--white;
 }
 .menuNav {
   display: none;
@@ -35,19 +35,19 @@ nav {
 .navbarLeft ul li a,
 .navbarRight ul li a {
   text-decoration: none;
-  color: var(--light-pink);
-  border: 1px solid var(--white);
+  color: $--light-pink;
+  border: 1px solid $--white;
   border-radius: 12px;
   padding: 12px;
 }
 .navbarLeft ul li a:hover,
 .navbarRight ul li a:hover {
-  color: var(--flag--green);
-  border: 1px solid var(--flag--green);
+  color: $--flag--green;
+  border: 1px solid $--flag--green;
 }
 .navbarEmail {
-  color: var(--light-pink);
-  font-size: var(--sm);
+  color: $--light-pink;
+  font-size: $--sm;
   margin-right: 20px;
   cursor: pointer;
 }
@@ -61,10 +61,10 @@ nav {
 .navbarShoppingCart div{
   width: 18px;
   height: 18px;
-  color: var(--light-pink);
-  background-color: var(--flag--green);
+  color: $--light-pink;
+  background-color: $--flag--green;
   border-radius: 50%;
-  font-size: var(--sm);
+  font-size: $--sm;
   font-weight: bold;
   position: absolute;
   top: -6px;

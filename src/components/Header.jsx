@@ -7,7 +7,7 @@ import logo from 'assets/logos/yardSaleFull.svg'
 import menus from 'assets/icons/menu.svg'
 import arrow from 'assets/icons/arrow.svg'
 import scart from 'assets/icons/shoppingCart.svg'
-import Header from 'styles/components/Header.scss'
+import styles from 'styles/components/Header.module.scss'
 
 const Header = () => {
   const [toggle, setToggle] = useState(false)
@@ -19,7 +19,7 @@ const Header = () => {
     setToggle(!toggle)
   }
   return (
-    <nav>
+    <nav className={styles.Nav}>
       <img src={menus} alt="menu" className="menuNav" onClick={() => setToogleMenu(!toogleMenu)} />
       <div className="navbarLeft">
         <img src={logo} alt="logo" className="logoNav" />
