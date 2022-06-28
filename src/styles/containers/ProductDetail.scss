@@ -1,0 +1,47 @@
+@use '../vars';
+
+.productDetail {
+  width: 360px;
+  padding-bottom: 24px;
+  position: absolute;
+  right: 5px;
+}
+.productDetailClose {
+  background: var(--white);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 8px;
+  border-radius: 50%;
+}
+.productDetailClose img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.productDetail > img:nth-child(2) {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 0 0 20px 20px;
+}
+.points {
+display: flex;
+justify-content: center;
+}
+.points > li {
+background: var(--light-pink);
+width: 8px;
+height: 8px;
+margin: 8px 6px;
+border-radius: 50%;
+list-style-type: none;
+cursor: pointer;
+}
+.points > .active {
+background: var(--flag--green);
+}
+.points > li:hover {
+background: var(--flag--green);
+}

@@ -1,0 +1,46 @@
+@use '../vars';
+
+.menuMob {
+  height: 90vh;
+  border: 1px solid var(--light-pink);
+  border-radius: 8px;
+  padding: 20px 20px 0 20px;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--white);
+  z-index: 1;
+}
+.menuMob a {
+  text-decoration: none;
+  color: var(--black);
+  font-weight: bold
+}
+.menuMob ul {
+  padding: 0;
+  list-style: none;
+}
+.menuMob ul:nth-child(1){
+
+  border-bottom: 1px solid var(--light-pink);
+}
+.menuMob ul li {
+  margin-bottom: 24px;
+}
+.menuMob .email {
+  font-size: var(--sm);
+  font-weight: 300;
+}
+.menuMob .bloquEnd {
+  position: absolute;
+  bottom: 12px;
+}
+.menuMob .bloquEnd li{
+  margin-bottom: 0;
+}
+.menuMob .signOut {
+  color: var(--flag--green);
+  font-size: var(--sm);
+}

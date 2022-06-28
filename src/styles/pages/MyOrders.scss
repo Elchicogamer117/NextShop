@@ -1,0 +1,21 @@
+@use '../vars';
+
+.myOrders {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.myOrdersContainer {
+  display: grid;
+  grid-template-rows: auto fr auto;
+  width: 300px;
+}
+.title {
+  font-size: var(--lg);
+  margin-bottom: 40px;
+}
+.myOrderContent {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,40 @@
+@use '../vars';
+
+.menuDesk {
+  width: 100px;
+  height: auto;
+  border: 1px solid var(--light-pink);
+  border-radius: 8px;
+  padding: 20px 20px 0 20px;
+  position: absolute;
+  top: 60px;
+  right: 60px;
+  background: var(--white);
+  z-index: 1;
+}
+.menuDesk ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menuDesk ul li{
+  text-align:  end;
+}
+.menuDesk ul li:not(:last-child){
+  font-weight: bold;
+}
+.menuDesk ul li:last-child{
+  padding-top: 20px;
+  border-top:  1px solid var(--light-pink);
+  color: var(--flag--green);
+}
+.menuDesk ul li:last-child a {
+  color: var(--flag--green);
+  font-size: var(--sm);
+}
+.menuDesk ul li a {
+  color: var(--black);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 20px;
+}

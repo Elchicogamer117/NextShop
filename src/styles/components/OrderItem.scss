@@ -1,0 +1,24 @@
+@use '../vars';
+
+.orderItem {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 16px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+.orderItem figure {
+  margin: 0;
+}
+.orderItem figure img {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.orderItem p:nth-child(2) {
+  color: var(--light-pink);
+}
+.orderItem p:nth-child(3) {
+  font-weight: bold;
+}

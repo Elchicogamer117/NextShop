@@ -1,0 +1,69 @@
+@use '../vars';
+
+.createAccount {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.createAccountContainer {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  width: 300px;
+}
+.title {
+  font-size: var(--lg);
+  margin-bottom: 36px;
+  text-align: start;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: var(--sm);
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.input {
+  background-color: var(--text-input-field);
+  border: none;
+  border-radius: 8px;
+  height: 32px;
+  font-size: var(--md);
+  padding: 4px;
+  margin-bottom: 8px;
+}
+.inputName,.form,.inputPwd {
+  margin-bottom: 20px;
+
+}
+.primaryButton {
+  background-color: var(--flag--green);
+  border-radius: 8px;
+  border: none;
+  color: var(--white);
+  width: 100%;
+  height:  48px;
+  cursor: pointer;
+  font-size: var(--md);
+  font-weight: bold;
+}
+.loginButton {
+  margin-top: 12px;
+  margin-bottom: 28px;
+}
+@media (max-width: 640px) {
+  .form {
+      height: 100%;
+      justify-content: space-between;
+  }
+  .createAccount {
+      height: 100%;
+  }
+}

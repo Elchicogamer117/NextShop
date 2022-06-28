@@ -1,0 +1,21 @@
+.notFound {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+.card {
+  text-align: center;
+  font-weight: bold;
+}
+.card div:nth-child(1) {
+  font-size: 200px;
+  color: #800000;
+  margin: 0;
+}
+.card div:nth-child(2) {
+  font-size: 100px;
+  color: #004c00;
+}
+.card img {
+  height: 200px;
+}

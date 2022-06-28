@@ -1,0 +1,15 @@
+body {
+  margin: 0; 
+  font-family: 'Quicksand', sans-serif;
+}
+body::-webkit-scrollbar {
+  width: 12px;
+  }
+body::-webkit-scrollbar-thumb {
+  background: var(--flag--green);
+  border-radius: 4px;
+  }
+  
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--flag--green-hover);
+  }
