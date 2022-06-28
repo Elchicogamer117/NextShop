@@ -1,13 +1,13 @@
 import React, { useContext, useState } from 'react'
-import AppContext from '@context/AppContext'
+import AppContext from 'context/AppContext'
 import MenuDesk from './MenuDesk'
 import MenuMob from './MenuMob'
-import ShoppingCart from '@containers/ShoppingCart'
-import logo from '@logos/yardSaleFull.svg'
-import menus from '@icons/menu.svg'
-import arrow from '@icons/arrow.svg'
-import scart from '@icons/shoppingCart.svg'
-import '@styles/components/Header.scss'
+import ShoppingCart from 'containers/ShoppingCart'
+import logo from 'assets/logos/yardSaleFull.svg'
+import menus from 'assets/icons/menu.svg'
+import arrow from 'assets/icons/arrow.svg'
+import scart from 'assets/icons/shoppingCart.svg'
+import Header from 'styles/components/Header.scss'
 
 const Header = () => {
   const [toggle, setToggle] = useState(false)

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
-import AppContext from '@context/AppContext'
-import close from '@icons/btClose.svg'
-import '@styles/components/ShoppingCartItem.scss'
+import AppContext from 'context/AppContext'
+import close from 'assets/icons/btClose.svg'
+import 'styles/components/ShoppingCartItem.scss'
 
 const ShoppingCartItem = ({ product, indexValue }) => {
   const { removeFromCart } = useContext(AppContext)

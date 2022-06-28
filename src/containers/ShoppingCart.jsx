@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
-import AppContext from '@context/AppContext'
-import ShoppingCartItem from '@components/ShoppingCartItem'
-import arrow from '@icons/arrow.svg'
-import '@styles/containers/ShoppingCart.scss'
+import AppContext from 'context/AppContext'
+import ShoppingCartItem from 'components/ShoppingCartItem'
+import arrow from 'assets/icons/arrow.svg'
+import 'styles/containers/ShoppingCart.scss'
 
 const ShoppingCart = ({ toggleShopCart, setToggleShopCart }) => {
   const { state } = useContext(AppContext)
