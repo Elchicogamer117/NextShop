@@ -11,15 +11,11 @@ import styles from 'styles/components/Header.module.scss'
 
 const Header = () => {
   const { state, toggleShopCart, toogleMenu } = useContext(AppContext)
-
-  const handleToggle = () => {
-    setToggle(!toggle)
-  }
   return (
-    <nav className={styles.Nav}>
-      <img src={menus} alt="menu" className="menuNav" onClick={() => toogleMenu()} />
-      <div className="navbarLeft">
-        <img src={logo} alt="logo" className="logoNav" />
+    <nav className={styles.nav}>
+      <img src={menus} alt="menu" className={styles.menu} onClick={() => toogleMenu()} />
+      <div className={styles.navbarLeft}>
+        <img src={logo} alt="logo" className={styles.logoNav}/>
         <ul>
           <li>
             <a href="/">All</a>
@@ -41,13 +37,13 @@ const Header = () => {
           </li>
         </ul>
       </div>
-      <div className="navbarRight">
+      <div className={styles.navbarRight}>
         <ul>
-          <li onClick={() => toogleMenu()} className="navbarEmail"> 
+          <li onClick={() => toogleMenu()} className={styles.navbarEmail}> 
             elchicogamer117@git.com
             <img src={arrow} alt="arrow" />
           </li>
-          <li onClick={() => toggleShopCart()} className="navbarShoppingCart"> 
+          <li onClick={() => toggleShopCart()} className={styles.navbarShoppingCart}> 
             <img src={scart} alt="shoppingCart" />
             {state.cart.length > 0 ? <div> {state.cart.length > 9 ? '+9' : state.cart.length} </div> : null}
           </li>
