@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import AppContext from 'context/AppContext'
 import MenuDesk from './MenuDesk'
-import MenuMob from './MenuMob'
+// import MenuMob from './MenuMob'
 import ShoppingCart from 'containers/ShoppingCart'
 import logo from 'assets/logos/yardSaleFull.svg'
 import menus from 'assets/icons/menu.svg'
@@ -10,17 +10,14 @@ import scart from 'assets/icons/shoppingCart.svg'
 import styles from 'styles/components/Header.module.scss'
 
 const Header = () => {
-  const [toggle, setToggle] = useState(false)
-  const [toggleShopCart, setToggleShopCart] = useState(false)
-  const [toogleMenu, setToogleMenu] = useState(false)
-  const { state: {cart} } = useContext(AppContext)
+  const { state, toggleShopCart, toogleMenu } = useContext(AppContext)
 
   const handleToggle = () => {
     setToggle(!toggle)
   }
   return (
     <nav className={styles.Nav}>
-      <img src={menus} alt="menu" className="menuNav" onClick={() => setToogleMenu(!toogleMenu)} />
+      <img src={menus} alt="menu" className="menuNav" onClick={() => toogleMenu()} />
       <div className="navbarLeft">
         <img src={logo} alt="logo" className="logoNav" />
         <ul>
@@ -46,19 +43,19 @@ const Header = () => {
       </div>
       <div className="navbarRight">
         <ul>
-          <li onClick={handleToggle} className="navbarEmail"> 
+          <li onClick={() => toogleMenu()} className="navbarEmail"> 
             elchicogamer117@git.com
             <img src={arrow} alt="arrow" />
           </li>
-          <li onClick={() => setToggleShopCart(!toggleShopCart)} className="navbarShoppingCart"> 
+          <li onClick={() => toggleShopCart()} className="navbarShoppingCart"> 
             <img src={scart} alt="shoppingCart" />
-            {cart.length > 0 ? <div> {cart.length > 9 ? '+9' : cart.length} </div> : null}
+            {state.cart.length > 0 ? <div> {state.cart.length > 9 ? '+9' : state.cart.length} </div> : null}
           </li>
         </ul>
       </div>
-      {toogleMenu && <MenuMob />}
-      {toggle && <MenuDesk />}
-      {toggleShopCart && <ShoppingCart toggleShopCart={toggleShopCart} setToggleShopCart={setToggleShopCart} />}
+      {/* {state.menuIsOpen && <MenuMob />} */}
+      {state.menuIsOpen && <MenuDesk />}
+      {state.scartIsOpen && <ShoppingCart />}
     </nav>
   )
 }

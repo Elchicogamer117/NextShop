@@ -2,6 +2,8 @@ import { useState } from "react"
 
 const initialState = {
   cart: [],
+  scartIsOpen: false,
+  menuIsOpen: false,
 }
 
 const useInitialState = () => {
@@ -21,10 +23,26 @@ const useInitialState = () => {
     })
   }
 
+  const toggleShopCart = () => {
+    setState({
+      ...state,
+      scartIsOpen: !state.scartIsOpen,
+    })
+  }
+  
+  const toogleMenu = () => {
+    setState({
+      ...state,
+      menuIsOpen: !state.menuIsOpen,
+    })
+  }
+
   return {
     state,
     addToCart,
-    removeFromCart
+    removeFromCart,
+    toggleShopCart,
+    toogleMenu,
   }
 }
 
