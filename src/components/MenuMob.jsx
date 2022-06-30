@@ -1,9 +1,9 @@
 import React from 'react'
-import '../styles/components/MenuMob.scss'
+import styles from '../styles/components/MenuMob.module.scss'
 
 const MenuMob = () => {
   return (
-    <div className="menuMob">
+    <div className={styles.menuMob}>
       <ul>
         <li>
           <a href="/">CATEGORIES</a>
@@ -35,12 +35,12 @@ const MenuMob = () => {
           <a href="/"> My account </a>
         </li>
       </ul>
-      <ul className="bloquEnd">
+      <ul className={styles.bloquEnd}>
         <li>
-          <a href="/" className="email"> elchicogamer117@git.com </a>
+          <a href="/" className={styles.email}> elchicogamer117@git.com </a>
         </li>
         <li>
-          <a href="/" className="signOut"> Sign out </a>
+          <a href="/" className={styles.signOut}> Sign out </a>
         </li>
       </ul>
     </div>

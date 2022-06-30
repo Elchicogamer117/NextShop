@@ -4,6 +4,7 @@ const initialState = {
   cart: [],
   scartIsOpen: false,
   menuIsOpen: false,
+  menuIsOpenMob: false,
 }
 
 const useInitialState = () => {
@@ -29,11 +30,17 @@ const useInitialState = () => {
       scartIsOpen: !state.scartIsOpen,
     })
   }
-  
-  const toogleMenu = () => {
+
+  const toogleMenuDesk = () => {
     setState({
       ...state,
       menuIsOpen: !state.menuIsOpen,
+    })
+  }
+  const toogleMenuMob = () => {
+    setState({
+      ...state,
+      menuIsOpenMob: !state.menuIsOpenMob,
     })
   }
 
@@ -42,7 +49,8 @@ const useInitialState = () => {
     addToCart,
     removeFromCart,
     toggleShopCart,
-    toogleMenu,
+    toogleMenuDesk,
+    toogleMenuMob,
   }
 }
 

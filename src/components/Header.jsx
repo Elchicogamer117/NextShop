@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import AppContext from 'context/AppContext'
 import MenuDesk from './MenuDesk'
-// import MenuMob from './MenuMob'
+import MenuMob from './MenuMob'
 import ShoppingCart from 'containers/ShoppingCart'
 import logo from 'assets/logos/yardSaleFull.svg'
 import menus from 'assets/icons/menu.svg'
@@ -10,10 +10,10 @@ import scart from 'assets/icons/shoppingCart.svg'
 import styles from 'styles/components/Header.module.scss'
 
 const Header = () => {
-  const { state, toggleShopCart, toogleMenu } = useContext(AppContext)
+  const { state: {cart, scartIsOpen, menuIsOpen, menuIsOpenMob}, toggleShopCart, toogleMenuDesk, toogleMenuMob  } = useContext(AppContext)
   return (
     <nav className={styles.nav}>
-      <img src={menus} alt="menu" className={styles.menu} onClick={() => toogleMenu()} />
+      <img src={menus} alt="menu" className={styles.menu} onClick={() => toogleMenuMob()} />
       <div className={styles.navbarLeft}>
         <img src={logo} alt="logo" className={styles.logoNav}/>
         <ul>
@@ -39,19 +39,19 @@ const Header = () => {
       </div>
       <div className={styles.navbarRight}>
         <ul>
-          <li onClick={() => toogleMenu()} className={styles.navbarEmail}> 
+          <li onClick={() => toogleMenuDesk()} className={styles.navbarEmail}> 
             elchicogamer117@git.com
             <img src={arrow} alt="arrow" />
           </li>
           <li onClick={() => toggleShopCart()} className={styles.navbarShoppingCart}> 
             <img src={scart} alt="shoppingCart" />
-            {state.cart.length > 0 ? <div> {state.cart.length > 9 ? '+9' : state.cart.length} </div> : null}
+            {scart.length > 0 ? <div> {cart.length > 9 ? '+9' : cart.length} </div> : null}
           </li>
         </ul>
       </div>
-      {/* {state.menuIsOpen && <MenuMob />} */}
-      {state.menuIsOpen && <MenuDesk />}
-      {state.scartIsOpen && <ShoppingCart />}
+      {menuIsOpenMob && <MenuMob />}
+      {menuIsOpen && <MenuDesk />}
+      {scartIsOpen && <ShoppingCart />}
     </nav>
   )
 }

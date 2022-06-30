@@ -11,7 +11,7 @@ const ShoppingCartItem = ({ product, indexValue }) => {
   }
 
   return (
-    <div className={styles.ShoppingCartItem}>        
+    <div className={styles.shoopingCardItem}>        
       <figure>
         <img src={product.images[0]} alt={product.category.name} />                
       </figure>

@@ -12,23 +12,23 @@ const ShoppingCart = ({ toggleShopCart, setToggleShopCart }) => {
   }
 
   return (
-  <aside className={styles.ShoppingCart}>
-    <div className="titleContainer">
+  <aside className={styles.shoppingCart}>
+    <div className={styles.titleContainer}>
       <img src={arrow} alt="arrow" onClick={() => setToggleShopCart(!toggleShopCart)}/>
       <p> Shooping cart </p>
     </div>
-    <div className="myOrderContent">
+    <div className={styles.myOrderContent}>
       { state.cart.map((product,index) => {
         return <ShoppingCartItem product={product} key={index} indexValue={index} />
       }) }
     </div>
-    <div className="order">
+    <div className={styles.order}>
         <p>
           <span> Total </span>
         </p>
         <p> ${sumTotal()}  </p>
       </div>
-    <button className="primaryButton">
+    <button className={styles.primaryButton}>
         Checkout
       </button>
   </aside>

@@ -3,7 +3,7 @@ import styles from 'styles/components/MenuDesk.module.scss'
 
 const MenuDesk = () => {
   return (
-      <div className={styles.MenuDesk}>
+      <div className={styles.menuDesk}>
         <ul>
           <li>
             <a href="/"> My order</a>
