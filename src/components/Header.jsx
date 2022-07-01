@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react'
+import Image from 'next/image'
 import AppContext from 'context/AppContext'
 import MenuDesk from './MenuDesk'
 import MenuMob from './MenuMob'
@@ -13,9 +14,9 @@ const Header = () => {
   const { state: {cart, scartIsOpen, menuIsOpen, menuIsOpenMob}, toggleShopCart, toogleMenuDesk, toogleMenuMob  } = useContext(AppContext)
   return (
     <nav className={styles.nav}>
-      <img src={menus} alt="menu" className={styles.menu} onClick={() => toogleMenuMob()} />
+      <Image src={menus} alt="menu" className={styles.menu} onClick={() => toogleMenuMob()} />
       <div className={styles.navbarLeft}>
-        <img src={logo} alt="logo" className={styles.logoNav}/>
+        <Image src={logo} alt="logo" className={styles.logoNav}/>
         <ul>
           <li>
             <a href="/">All</a>
@@ -41,10 +42,10 @@ const Header = () => {
         <ul>
           <li onClick={() => toogleMenuDesk()} className={styles.navbarEmail}> 
             elchicogamer117@git.com
-            <img src={arrow} alt="arrow" />
+            <Image src={arrow} alt="arrow" />
           </li>
           <li onClick={() => toggleShopCart()} className={styles.navbarShoppingCart}> 
-            <img src={scart} alt="shoppingCart" />
+            <Image src={scart} alt="shoppingCart" />
             {scart.length > 0 ? <div> {cart.length > 9 ? '+9' : cart.length} </div> : null}
           </li>
         </ul>
