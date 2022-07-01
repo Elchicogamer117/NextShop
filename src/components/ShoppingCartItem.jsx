@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import Image from 'next/image'
 import AppContext from 'context/AppContext'
 import close from 'assets/icons/btClose.svg'
 import styles from 'styles/components/ShoppingCartItem.module.scss'
@@ -17,7 +18,7 @@ const ShoppingCartItem = ({ product, indexValue }) => {
       </figure>
       <p> {product.title} </p>
       <p> ${product.price} </p>
-      <img src={close} alt="close" onClick={() => handleRemove(indexValue)}/>
+      <Image src={close} alt="close" onClick={() => handleRemove(indexValue)}/>
     </div>
   )
 }

@@ -1,7 +1,8 @@
 import React, { useContext } from 'react'
-import btCart from '@icons/btAddToCart.svg'
-import AppContext from '@context/AppContext'
-import '@styles/components/ProductoItem.scss'
+// import Image from 'next/image'
+import AppContext from 'context/AppContext'
+import btCart from 'assets/icons/btAddToCart.svg'
+import styles from 'styles/components/ProductoItem.module.scss'
 
 const ProductItem = ({product}) => {
   const { addToCart } = useContext(AppContext)
@@ -12,9 +13,10 @@ const ProductItem = ({product}) => {
   return (
     <>
       {product.images[0] !== "" ? (
-    <div className="productItem">
-      <img src={product.images[0]} alt={product.category.name} />
-      <div className="productInfo">
+    <div className={styles.productItem}>
+      <img src={product.images[0]} alt={product.category.name}/>
+      {/* <Image loader={() => product.images[0]} src={product.images[0]} alt={product.category.name} width='100%' height='100%' layout="responsive" /> */}
+      <div className={styles.productInfo}>
         <div>
           <p> ${product.price} </p>
           <p> {product.title} </p>
