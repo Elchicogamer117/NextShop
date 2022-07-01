@@ -1,7 +1,7 @@
-import React from 'react'
-import Head from 'next/head'
-import OrderItem from 'components/OrderItem'
-import styles from 'styles/pages/MyOrder.module.scss'
+import React from 'react';
+import Head from 'next/head';
+import OrderItem from 'components/OrderItem';
+import styles from 'styles/pages/MyOrder.module.scss';
 
 const MyOrder = () => {
   return (
@@ -25,7 +25,7 @@ const MyOrder = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default MyOrder
+export default MyOrder;
