@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react'
+import Link from 'next/link'
 import Image from 'next/image'
 import AppContext from 'context/AppContext'
 import MenuDesk from './MenuDesk'
@@ -16,7 +17,9 @@ const Header = () => {
     <nav className={styles.nav}>
       <Image src={menus} alt="menu" className={styles.menu} onClick={() => toogleMenuMob()} />
       <div className={styles.navbarLeft}>
-        <Image src={logo} alt="logo" className={styles.logoNav}/>
+        <Link href='/'>
+          <Image src={logo} alt="logo" className={styles.logoNav}/>
+        </Link>
         <ul>
           <li>
             <a href="/">All</a>

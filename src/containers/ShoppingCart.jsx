@@ -1,11 +1,13 @@
 import React, { useContext } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
 import AppContext from 'context/AppContext'
 import ShoppingCartItem from 'components/ShoppingCartItem'
 import arrow from 'assets/icons/arrow.svg'
 import styles from 'styles/containers/ShoppingCart.module.scss'
 
-const ShoppingCart = ({ toggleShopCart, setToggleShopCart }) => {
-  const { state } = useContext(AppContext)
+const ShoppingCart = () => {
+  const { state, toggleShopCart } = useContext(AppContext)
 
   const sumTotal = () => {
     return state.cart.reduce((accu, currVal) => accu + currVal.price, 0)
@@ -14,7 +16,7 @@ const ShoppingCart = ({ toggleShopCart, setToggleShopCart }) => {
   return (
   <aside className={styles.shoppingCart}>
     <div className={styles.titleContainer}>
-      <img src={arrow} alt="arrow" onClick={() => setToggleShopCart(!toggleShopCart)}/>
+      <Image src={arrow} alt="arrow" onClick={() => toggleShopCart()}/>
       <p> Shooping cart </p>
     </div>
     <div className={styles.myOrderContent}>
@@ -28,9 +30,9 @@ const ShoppingCart = ({ toggleShopCart, setToggleShopCart }) => {
         </p>
         <p> ${sumTotal()}  </p>
       </div>
-    <button className={styles.primaryButton}>
+    <Link href='/myorder' className={styles.primaryButton}>
         Checkout
-      </button>
+    </Link>
   </aside>
   )
 }

@@ -7,7 +7,13 @@ const useGetProducts = (API) => {
   useEffect(() => {
     const getData = async () => {
       const response = await axios.get(API)
-      setProducts(response.data)
+      const filterProducts = response.data.filter(product => {
+        var RegExp = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+        if (RegExp.test(product.images[0])){
+          return product.images.length > 0
+        }
+      })
+      setProducts(filterProducts)
     }
     getData()
     }, [])

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-// import Image from 'next/image'
+import Image from 'next/image'
 import AppContext from 'context/AppContext'
 import btCart from 'assets/icons/btAddToCart.svg'
 import styles from 'styles/components/ProductoItem.module.scss'
@@ -12,9 +12,9 @@ const ProductItem = ({product}) => {
   }
   return (
     <>
-      {product.images[0] !== "" ? (
+      {product.images[0] !== '' ? (
     <div className={styles.productItem}>
-      <img src={product.images[0]} alt={product.category.name}/>
+      <Image src={product.images[0]} width={240} height={240} alt={product.category.name} />
       {/* <Image loader={() => product.images[0]} src={product.images[0]} alt={product.category.name} width='100%' height='100%' layout="responsive" /> */}
       <div className={styles.productInfo}>
         <div>
@@ -22,7 +22,7 @@ const ProductItem = ({product}) => {
           <p> {product.title} </p>
         </div>
         <figure onClick={() => handleClick(product)}>
-          <img src={btCart} alt="addToCart" />
+          <Image src={btCart} alt="addToCart" />
         </figure>
       </div>
     </div>

@@ -14,11 +14,11 @@ const ShoppingCartItem = ({ product, indexValue }) => {
   return (
     <div className={styles.shoopingCardItem}>        
       <figure>
-        <img src={product.images[0]} alt={product.category.name} />                
+        <Image src={product.images[0]} width={80} height={80} alt={product.category.name} />                
       </figure>
       <p> {product.title} </p>
       <p> ${product.price} </p>
-      <Image src={close} alt="close" onClick={() => handleRemove(indexValue)}/>
+      <Image src={close} alt="close" className={styles.close} onClick={() => handleRemove(indexValue)}/>
     </div>
   )
 }

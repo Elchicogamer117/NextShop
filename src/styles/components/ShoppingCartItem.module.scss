@@ -6,7 +6,6 @@
   gap: 16px;
   margin-bottom: 20px;
   align-items: center;
-  background-color: aqua;
 }
 .shoopingCardItem figure {
 margin: 0;
@@ -23,7 +22,7 @@ color: $--light-pink;
 .shoopingCardItem p:nth-child(3) {
 font-weight: bold;
 }
-.shoopingCardItem p + img {
+.close {
   margin-right: 8px;
   cursor: pointer;
 }
