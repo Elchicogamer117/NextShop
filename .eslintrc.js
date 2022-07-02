@@ -1,20 +1,14 @@
 module.exports = {
   root: true,
   env: {
-      browser: true,
-      amd: true,
-      node: true,
-      es6: true,
+    browser: true,
+    amd: true,
+    node: true,
+    es6: true,
   },
-  extends: [
-      'eslint:recommended',
-      'plugin:jsx-a11y/recommended',
-      'plugin:prettier/recommended',
-      'next',
-      'next/core-web-vitals',
-  ],
+  extends: ['eslint:recommended', 'plugin:jsx-a11y/recommended', 'plugin:prettier/recommended', 'next', 'next/core-web-vitals', 'eslint-config-prettier'],
   rules: {
-      'semi': ['error', 'always'],
-      'prettier/prettier':0,
+    semi: ['error', 'always'],
+    'prettier/prettier': 0,
   },
-}
+};

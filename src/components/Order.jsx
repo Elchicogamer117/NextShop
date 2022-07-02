@@ -1,8 +1,8 @@
-import React from 'react'
-import Image from 'next/image'
-import arrow from 'assets/icons/arrow.svg'
-import styles from 'styles/components/Order.module.scss'
-import '@styles/components/Order.scss'
+import React from 'react';
+import Image from 'next/image';
+import arrow from 'assets/icons/arrow.svg';
+import styles from 'styles/components/Order.module.scss';
+import '@styles/components/Order.scss';
 
 const Order = () => {
   return (
@@ -14,7 +14,7 @@ const Order = () => {
       <p> $560 </p>
       <Image src={arrow} alt="arrow" />
     </div>
-  )
-}
+  );
+};
 
-export default Order
+export default Order;
