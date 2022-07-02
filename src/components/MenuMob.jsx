@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import styles from '../styles/components/MenuMob.module.scss'
 
 const MenuMob = () => {
@@ -6,41 +7,41 @@ const MenuMob = () => {
     <div className={styles.menuMob}>
       <ul>
         <li>
-          <a href="/">CATEGORIES</a>
+          <Link href='/'>CATEGORIES</Link>
         </li>
         <li>
-          <a href="/"> All </a>
+          <Link href='/'> All </Link>
         </li>
         <li>
-          <a href="/"> Clothes </a>
+          <Link href='/'> Clothes </Link>
         </li>
         <li>
-          <a href="/"> Electronics </a>
+          <Link href='/'> Electronics </Link>
         </li>
         <li>
-          <a href="/"> Furnitures </a>
+          <Link href='/'> Furnitures </Link>
         </li>
         <li>
-          <a href="/"> Toys </a>
+          <Link href='/'> Toys </Link>
         </li>
         <li>
-          <a href="/"> Others </a>
+          <Link href='/'> Others </Link>
         </li>
       </ul>
       <ul>
         <li>
-          <a href="/"> My orders </a>
+          <Link href='/'> My orders </Link>
         </li>
         <li>
-          <a href="/"> My account </a>
+          <Link href='/'> My account </Link>
         </li>
       </ul>
       <ul className={styles.bloquEnd}>
         <li>
-          <a href="/" className={styles.email}> elchicogamer117@git.com </a>
+          <Link href='/' className={styles.email}> elchicogamer117@git.com </Link>
         </li>
         <li>
-          <a href="/" className={styles.signOut}> Sign out </a>
+          <Link href='/' className={styles.signOut}> Sign out </Link>
         </li>
       </ul>
     </div>

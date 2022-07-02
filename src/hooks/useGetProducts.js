@@ -8,7 +8,7 @@ const useGetProducts = (API) => {
     const getData = async () => {
       const response = await axios.get(API);
       const filterProducts = response.data.filter((product) => {
-        var RegExp = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+        var RegExp = /(ftp|http|https):\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-/]))?/;
         if (RegExp.test(product.images[0])) {
           return product.images.length > 0;
         }

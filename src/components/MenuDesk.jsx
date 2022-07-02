@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import styles from 'styles/components/MenuDesk.module.scss'
 
 const MenuDesk = () => {
@@ -6,13 +7,13 @@ const MenuDesk = () => {
       <div className={styles.menuDesk}>
         <ul>
           <li>
-            <a href="/"> My order</a>
+            <Link href='/'> My order</Link>
           </li>
           <li>
-            <a href="/"> My account</a>
+            <Link href='/'> My account</Link>
           </li>
           <li>
-            <a href="/"> Sign out</a>
+            <Link href='/'> Sign out</Link>
           </li>
         </ul>
       </div>
