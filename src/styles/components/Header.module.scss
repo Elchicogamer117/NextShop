@@ -11,11 +11,13 @@
   background: $--white;
   z-index: 1;
 }
-.menuNav {
+.menu {
   display: none;
+
 }
-.logoNav {
+.logo {
   width: 100px;
+  cursor: pointer;
 }
 .navbarLeft {
   display: flex;
@@ -47,9 +49,11 @@
   border: 1px solid $--flag--green;
 }
 .navbarEmail {
-  color: $--light-pink;
-  font-size: $--sm;
+  display: flex;
+  gap: 8px;
   margin-right: 20px;
+  font-size: $--sm;
+  color: $--light-pink;
   cursor: pointer;
 }
 .navbarEmail img {
@@ -78,7 +82,7 @@
   cursor: pointer;
 }
 @media (max-width: 850px) {
-  .menuNav {
+  .menu {
         display: block;
         cursor: pointer;
   }

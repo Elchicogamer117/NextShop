@@ -7,46 +7,44 @@ const MenuMob = () => {
     <div className={styles.menuMob}>
       <ul>
         <li>
-          <Link href="/">CATEGORIES</Link>
+          <Link href="/categories">CATEGORIES</Link>
         </li>
         <li>
-          <Link href="/"> All </Link>
+          <Link href="/all"> All </Link>
         </li>
         <li>
-          <Link href="/"> Clothes </Link>
+          <Link href="/clothes"> Clothes </Link>
         </li>
         <li>
-          <Link href="/"> Electronics </Link>
+          <Link href="/electronics"> Electronics </Link>
         </li>
         <li>
-          <Link href="/"> Furnitures </Link>
+          <Link href="/furnitures"> Furnitures </Link>
         </li>
         <li>
-          <Link href="/"> Toys </Link>
+          <Link href="/toys"> Toys </Link>
         </li>
         <li>
-          <Link href="/"> Others </Link>
+          <Link href="/others"> Others </Link>
         </li>
       </ul>
       <ul>
         <li>
-          <Link href="/"> My orders </Link>
+          <Link href="/myorder"> My orders </Link>
         </li>
         <li>
-          <Link href="/"> My account </Link>
+          <Link href="/myaccount"> My account </Link>
         </li>
       </ul>
       <ul className={styles.bloquEnd}>
         <li>
-          <Link href="/" className={styles.email}>
-            {' '}
-            elchicogamer117@git.com{' '}
+          <Link href="/">
+            <p className={styles.email}> elchicogamer117@git.com </p>
           </Link>
         </li>
         <li>
-          <Link href="/" className={styles.signOut}>
-            {' '}
-            Sign out{' '}
+          <Link href="/signout">
+            <p className={styles.signOut}> Sign out </p>
           </Link>
         </li>
       </ul>

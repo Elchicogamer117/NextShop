@@ -5,7 +5,7 @@ import AppContext from 'context/AppContext';
 import MenuDesk from './MenuDesk';
 import MenuMob from './MenuMob';
 import ShoppingCart from 'containers/ShoppingCart';
-import logo from 'assets/logos/yardSaleFull.svg';
+import logo from 'assets/icons/yardSaleFull.svg';
 import menus from 'assets/icons/menu.svg';
 import arrow from 'assets/icons/arrow.svg';
 import scart from 'assets/icons/shoppingCart.svg';
@@ -20,10 +20,11 @@ const Header = () => {
   } = useContext(AppContext);
   return (
     <nav className={styles.nav}>
-      <Image src={menus} alt="menu" className={styles.menu} onClick={() => toogleMenuMob()} />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={menus.src} alt="menu" className={styles.menu} onClick={() => toogleMenuMob()} role="presentation" />
       <div className={styles.navbarLeft}>
         <Link href="/">
-          <Image src={logo} alt="logo" className={styles.logoNav} />
+          <Image src={logo} alt="logo" className={styles.logo} />
         </Link>
         <ul>
           <li>
@@ -49,12 +50,12 @@ const Header = () => {
       <div className={styles.navbarRight}>
         <ul>
           <li onClick={() => toogleMenuDesk()} className={styles.navbarEmail} role="presentation">
-            elchicogamer117@git.com
+            <p> elchicogamer117@git.com </p>
             <Image src={arrow} alt="arrow" />
           </li>
           <li onClick={() => toggleShopCart()} className={styles.navbarShoppingCart} role="presentation">
             <Image src={scart} alt="shoppingCart" />
-            {scart.length > 0 ? <div> {cart.length > 9 ? '+9' : cart.length} </div> : null}
+            {cart.length > 0 ? <div> {cart.length > 9 ? '+9' : cart.length} </div> : null}
           </li>
         </ul>
       </div>

@@ -24,5 +24,9 @@ font-weight: bold;
 }
 .close {
   margin-right: 8px;
+  filter: $--light-pink-svg;
   cursor: pointer;
+}
+.close:hover {
+  filter: $--crimson--red--hover;
 }

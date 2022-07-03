@@ -1,0 +1,27 @@
+@import 'vars';
+
+html,
+body {
+  margin: 0; 
+  font-family: 'Quicksand', sans-serif;
+}
+body::-webkit-scrollbar {
+  width: 12px;
+  }
+body::-webkit-scrollbar-thumb {
+  background: $--flag--green;
+  border-radius: 4px;
+  }
+  
+body::-webkit-scrollbar-thumb:hover {
+  background: $--flag--green-hover;
+  }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
