@@ -9,14 +9,16 @@ This project is part of a courses series where we build an online shop with Stac
 [In the second level]( https://github.com/Elchicogamer117/ReactShop) we transform that code in components and add important interactions.
 
 Now we migrate this code to Next to take advantage of his benefits of this frameworks.
+You can access the page with the link in the description or [by clicking here](https://yardsale117.vercel.app/)
 
 Among the main functionalities achieved to this point are:
 - Link pages of native form
-- Conversion the addition of images and styles to an import system to generate automatic hashes and improve file linking.
-- Use of nextjs tags to improve the SEO 
+- Conversion the addition of images and styles to an import system to generate automatic hashes and improve file linking
+- Improve of user experience
+- Code standardization with ESLint and Prettier
+- Use of nextjs tags to improve the SEO
 - Reduce loading time with SSR
 - Possibility of install the web app (PWA)
-- Improve of user experience
 
 ## Main behavior 🎉
 Below you can see the main actions implemented, visually it is very similar to the previous version, because now the improvements were made at the processing level, easier to implement since it is no longer necessary to configure external packages such as webpack or babel.
